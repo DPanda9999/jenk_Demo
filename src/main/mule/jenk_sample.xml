@@ -10,11 +10,11 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 		<http:listener-connection host="0.0.0.0" port="8081" />
 	</http:listener-config>
 	<file:config name="File_Config" doc:name="File Config" doc:id="ccdb0298-41cf-44df-9736-e98158643263" >
-		<file:connection workingDir="C:\Mulesoft\Doctus\jenk_Demo" />
+		<file:connection workingDir="C:\Users\dhirajbpanda\Documents\GitHub\jenk_Demo\src\main\resources" />
 	</file:config>
 	<flow name="jenk_sampleFlow" doc:id="a3aaa959-fe24-45dc-b994-ea3c73665aa7" >
 		<http:listener doc:name="Listener" doc:id="b63ef0fb-194f-4a7f-b779-2795e089efc7" config-ref="HTTP_Listener_config" path="/readFile"/>
-		<file:read doc:id="f6fc4722-9fae-453f-bcb1-2ff21a0893e0" config-ref="File_Config" path="C:\Mulesoft\Doctus\jenk_Demo\movie.csv"/>
+		<file:read doc:id="f6fc4722-9fae-453f-bcb1-2ff21a0893e0" config-ref="File_Config" path="C:\Users\dhirajbpanda\Documents\GitHub\jenk_Demo\src\main\resources\movie.csv"/>
 		<ee:transform doc:name="Transform Message" doc:id="ff3daeec-5537-4e9c-ade9-dff2ae182c71" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
