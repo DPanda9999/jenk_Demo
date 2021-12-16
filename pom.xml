@@ -98,6 +98,12 @@
 		</dependency>
 		<dependency>
 			<groupId>com.mulesoft.munit</groupId>
+			<artifactId>munit-remote</artifactId>
+			<version>2.3.6</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.mulesoft.munit</groupId>
 			<artifactId>munit-tools</artifactId>
 			<version>2.3.6</version>
 			<classifier>mule-plugin</classifier>
