@@ -3,7 +3,12 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-            bat 'mvn -B -U -e -V clean -DskipTests package'
+           echo "build success"
+      }
+    }
+    stage('Unit Test') { 
+      steps {
+        sh 'mvn clean test'
       }
     }
     stage('Test') {
@@ -17,8 +22,5 @@ pipeline {
             echo "deploy success"
 	  }
 	}
-  }
-  	tools {
-      maven 'M3'
   }
 }
