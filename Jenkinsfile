@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Unit Test') { 
       steps {
-        bat 'mvn clean test -Dtest=jenk_sample-test-suite-jenk_sampleFlowTest'
+        bat 'mvn -X test -Dtest=jenk_sample-test-suite-jenk_sampleFlowTest'
       }
     }
     stage('Test') {
