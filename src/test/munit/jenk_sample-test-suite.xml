@@ -12,6 +12,14 @@
 		<munit:execution >
 			<flow-ref doc:name="Flow-ref to jenk_sampleFlow" doc:id="a0434f7c-401a-47bb-b8a1-5856f5072de3" name="jenk_sampleFlow"/>
 		</munit:execution>
+		<munit:validation >
+			<munit-tools:verify-call doc:name="Verify call" doc:id="a6978196-5853-4ac8-8b00-17c3752bcda1" processor="ee:transform" times="1">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="Transform Message" attributeName="doc:name" />
+					<munit-tools:with-attribute whereValue="ff3daeec-5537-4e9c-ade9-dff2ae182c71" attributeName="doc:id" />
+				</munit-tools:with-attributes>
+			</munit-tools:verify-call>
+		</munit:validation>
 	</munit:test>
 
 
