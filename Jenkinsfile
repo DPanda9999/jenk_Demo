@@ -6,11 +6,6 @@ pipeline {
            echo "build success"
       }
     }
-    stage('Unit Test') { 
-      steps {
-        bat 'mvn -X clean test'
-      }
-    }
     stage('Test') {
       steps {
           echo "mvn test starts"
@@ -18,7 +13,7 @@ pipeline {
     }
     stage('Deploy Development') {
       steps {
-            bat "mvn clean package deploy -DskipTests -DmuleVersion=4.4.0 -Dusername=rishikasuri2701 -Dpassword=Comicoctober@21 -DapplicationName=jenk-sample -Denvironment=Sandbox -Dworkers=1 -DworkerType=Micro -DmuleDeploy"
+            bat "mvn clean package deploy -DmuleDeploy -DskipTests -DmuleVersion=4.4.0 -Dusername=rishikasuri2701 -Dpassword=Comicoctober@21 -DapplicationName=jenk-sample -Denvironment=Sandbox -Dworkers=1 -DworkerType=Micro -DmuleDeploy"
             echo "deploy success"
 	  }
 	}
